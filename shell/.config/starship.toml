@@ -1,0 +1,57 @@
+# Global prompt layout configuration (using literal strings to allow bracket escaping)
+format = '''
+[\[](bold white)$username[|](bold white)$shell[\]](bold white) $directory$git_branch$git_commit$git_status$c$cpp$golang$nodejs$python$rust$docker_context$aws
+$character'''
+
+# Displays the current user
+[username]
+show_always = true
+format = "[$user](bold cyan)"
+
+# Displays the current shell environment
+[shell]
+disabled = false
+format = "[$indicator](bold magenta)"
+zsh_indicator = "zsh"
+bash_indicator = "bash"
+fish_indicator = "fish"
+pwsh_indicator = "pwsh"
+cmd_indicator = "cmd"
+
+# Core navigation & system modules
+[directory]
+read_only = " 󰌾"
+truncation_length = 3
+truncate_to_repo = true
+
+[docker_context]
+symbol = " "
+
+[aws]
+symbol = "  "
+
+# Version Control
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+# Curated Language & Tool Symbols (Most Common)
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "
