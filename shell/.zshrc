@@ -1,3 +1,5 @@
+export PATH="/usr/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 # History file location and size
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -83,6 +85,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $relpath'
 
 # exports
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # yazi setup
 function y() {
@@ -92,3 +95,16 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/ha/.local/bin:$PATH"
+
+# Google Cloud SDK
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
+  source "$HOME/google-cloud-sdk/path.zsh.inc"
+fi
+
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then
+  source "$HOME/google-cloud-sdk/completion.zsh.inc"
+fi

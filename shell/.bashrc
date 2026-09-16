@@ -1,3 +1,5 @@
+export PATH="/usr/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 # Sample .bashrc for SUSE Linux
 # Copyright (c) SUSE Software Solutions Germany GmbH
 
@@ -52,3 +54,16 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+
+# opencode
+export PATH=/home/ha/.opencode/bin:$PATH
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/ha/.local/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ha/google-cloud-sdk/path.bash.inc' ]; then . '/home/ha/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/ha/google-cloud-sdk/completion.bash.inc' ]; then . '/home/ha/google-cloud-sdk/completion.bash.inc'; fi
